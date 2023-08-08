@@ -9,27 +9,6 @@ Examples:
 python3 run.py 'rtspsrc location=rtspt://user:pass@camera.com:5540/Streaming/Channels/101 ! rtph264depay ! identity name=adjust ! fakesink'
 
 Example output:
-frames =  2299  per frame =  33290094.903001305  fps =  30.039
-frames =  2399  per frame =  33289677.256356817  fps =  30.0393
-frames =  2499  per frame =  33289843.523809522  fps =  30.0392
-frames =  2599  per frame =  33290053.84570989  fps =  30.039
-frames =  2699  per frame =  33290112.12930715  fps =  30.0389
-frames =  2799  per frame =  33290178.42300822  fps =  30.0389
-frames =  2899  per frame =  33289837.55398413  fps =  30.0392
-frames =  2999  per frame =  33289966.00800267  fps =  30.0391
-frames =  3099  per frame =  33290097.759922557  fps =  30.039
-frames =  3199  per frame =  33290153.811503597  fps =  30.0389
-frames =  3299  per frame =  33290241.474083055  fps =  30.0388
-frames =  3399  per frame =  33289942.023830537  fps =  30.0391
-frames =  3499  per frame =  33289969.957987998  fps =  30.0391
-frames =  3599  per frame =  33289963.6218394  fps =  30.0391
-frames =  3699  per frame =  33290064.587726414  fps =  30.039
-frames =  3799  per frame =  33290067.53303501  fps =  30.039
-frames =  3899  per frame =  33290177.431392666  fps =  30.0389
-frames =  3999  per frame =  33289990.166541636  fps =  30.0391
-frames =  4099  per frame =  33290002.17955599  fps =  30.039
-frames =  4199  per frame =  33290001.758037627  fps =  30.039
-frames =  4299  per frame =  33290082.754128866  fps =  30.039
 frames =  4399  per frame =  33290161.90725165  fps =  30.0389
 frames =  4499  per frame =  33290024.964881085  fps =  30.039
 frames =  4599  per frame =  33290086.495107632  fps =  30.039
@@ -151,7 +130,7 @@ class Main:
         if self.frames % 100 == 0 and self.start_pts != None:
             delta = self.last_pts - self.start_pts
             per = (delta/(self.frames-1))
-            print("frames = ",(self.frames-1)," per frame = ",per," fps = ", round((1000000000/per),4))
+            print("frames = ",(self.frames-1)," pts per frame = ",per," fps = ", round((1000000000/per),4))
 
         return Gst.PadProbeReturn.OK
 

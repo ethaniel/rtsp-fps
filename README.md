@@ -27,6 +27,8 @@ frames =  2799  pts per frame =  33290178.42300822  fps =  30.0389
 The script outputs the FPS every 100 frames. The FPS is calculated based on the timestamp different of the first and the last frame received.
 The first 300 frames are ignored, because the PTS can be unstable when connecting for the first time.
 
+Keep this script running, until the `fps` value stops jumping up and down. Stop with Ctrl-C.
+
 # What to do with this number?
 
 So let's say you know that your FPS is `30.039`. You can now have gstreamer fix the framerate with `videorate` by providing 30039/1000 (30.039) as a framerate.

@@ -1,6 +1,6 @@
 # Calculate FPS rate of an RTSP stream
 
-This simply python script calculates the framerate of a RTSP stream based on the PTS field of it's frames.
+This simple python script calculates the framerate of a RTSP stream based on the PTS field of it's frames.
 
 Some camera manufacturers (Hikvision for example) state that their cameras produce output at 30fps. 
 In reality, the FPS of a RTSP stream can be slightly different (30.039 or 29.97 fps for example).

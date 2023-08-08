@@ -29,7 +29,7 @@ The first 300 frames are ignored, because the PTS can be unstable when connectin
 
 # What to do with this number?
 
-So let's say you know that your FPS is 30.039. You can now have gstreamer fix the framerate, so even if PTS is not monotonically increasing, you can still get a stable stream:
+So let's say you know that your FPS is 30.039. You can now have gstreamer fix the framerate with `videorate`, so even if PTS is not monotonically increasing, you can still get a stable stream:
 
 ```
 gst-launch-1.0 rtspsrc location=rtspt://user:pass@camera.com:5540/Streaming/Channels/101 ! \

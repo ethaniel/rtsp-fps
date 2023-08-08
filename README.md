@@ -9,9 +9,16 @@ This can produce stuttering when live streaming.
 Sometimes, the PTS rate might not be monotonically increasing between frames, causing even more stuttering.
 Knowing the actual framerate, can help with fixing the stream (explained at the bottom of this file).
 
-Usage:
+Usage for h264 streams:
 ```
-python3 run.py 'rtspsrc location=rtspt://user:pass@camera.com:5540/Streaming/Channels/101 ! rtph264depay ! identity name=adjust ! fakesink'
+python3 run.py 'rtspsrc location=rtspt://user:pass@camera.com:5540/Streaming/Channels/101 ! \
+rtph264depay ! identity name=adjust ! fakesink'
+```
+
+Usage for h265 streams:
+```
+python3 run.py 'rtspsrc location=rtspt://user:pass@camera.com:5540/Streaming/Channels/101 ! \
+rtph265depay ! identity name=adjust ! fakesink'
 ```
 
 Output:

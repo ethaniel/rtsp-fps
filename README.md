@@ -7,7 +7,7 @@ In reality, the FPS of a RTSP stream can be slightly different (30.039 or 29.97 
 This can produce stuttering when live streaming.
 
 Sometimes, the PTS rate might not be monotonically increasing between frames, causing even more stuttering.
-This script helps solve this problem as well.
+Knowing the actual framerate, can help with fixing the stream (explained at the bottom of this file).
 
 Usage:
 ```

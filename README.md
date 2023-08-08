@@ -34,6 +34,6 @@ So let's say you know that your FPS is 30.039. You can now have gstreamer fix th
 ```
 gst-launch-1.0 rtspsrc location=rtspt://user:pass@camera.com:5540/Streaming/Channels/101 ! \
 rtph264depay ! h264parse ! avdec_h264 ! \
-videorate ! video/x-raw,framerate=30039/1000 \
-! watchdog timeout=10000 ! autovideosink
+videorate ! video/x-raw,framerate=30039/1000 ! \
+watchdog timeout=10000 ! autovideosink
 ```
